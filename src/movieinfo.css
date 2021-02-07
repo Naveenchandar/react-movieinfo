@@ -1,0 +1,116 @@
+.movie-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.movie-info {
+    max-width: 250px;
+    width: 250px;
+    min-width: 250px;
+    /* height: 350px; */
+    height: auto;
+}
+.card-header {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.movie-info {
+    margin-bottom: 50px;
+}
+.movie-genre {
+    margin-bottom: 5px !important;
+}
+#card-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#card-body > p {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    color: lightslategray;
+}
+#card-body {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#read-more {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 16px;
+    padding: 7px;
+    font-size: 13px;
+}
+#average-voting {
+    cursor: pointer;
+    background: red;
+    padding: 5px;
+    top: -15px;
+    border-radius: 50px;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+/* #card-title:hover {
+    overflow: visible;
+    white-space: normal;
+    height: auto;
+} */
+/* #movie-poster{
+    width: 100%;
+    max-height: 30vh;
+    object-fit: contain;
+} */
+
+.pagination {
+    margin: 15px auto;
+    display: flex;
+    list-style: none;
+    outline: none;
+    justify-content: center;
+}
+.pagination > .active > a {
+    background-color: #47ccde;
+    border-color: #47ccde;
+    color: #fff;
+}
+.pagination > li > a {
+    border: 1px solid #47ccde;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    background-color: #47ccde;
+    border-color: #47ccde;
+    outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+    color: #47ccde;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    border-radius: unset;
+}
+
+.pagination > li {
+    padding: 0 10px;
+}
+
+.pagination > li .disabled > a{
+    cursor: not-allowed !important;
+}
