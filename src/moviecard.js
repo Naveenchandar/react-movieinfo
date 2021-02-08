@@ -10,7 +10,7 @@ import {
 } from 'shards-react';
 import './movieinfo.css'
 
-function Moviecard({item}) {
+function Moviecard({ item }) {
     return (
         <div>
             <Card className='movie-info' key={item.id}>
