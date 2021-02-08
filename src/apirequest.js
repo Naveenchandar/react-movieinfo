@@ -154,7 +154,19 @@ export const fetchData = async (pageNumber) => {
                 movie.genres = findGenreById;
             })
         }
-        movieInformation = [{ ...movieData, genreData, movieCreditData, movieStreamData }]
+        movieInformation = [{
+            ...movieData, genreData, movieCreditData, movieStreamData, trendngMovieResponseData,
+            topRatedResponseData,
+            actionResponseData,
+            comedyResponseData,
+            horrorResponseData,
+            dramaResponseData,
+            thrillerResponseData,
+            crimeResponseData,
+            sciFiResponseData,
+            warResponseData,
+            animationResponseData
+        }]
         return Promise.resolve(movie)
     }
 
@@ -168,6 +180,47 @@ export const fetchData = async (pageNumber) => {
         }
         ))
     }
+
+    const getGenreData = async (respdata) => {
+        let data = respdata?.results.map(item => {
+            return anAsyncFunction(item)
+        }
+        )
+        let results = await data;
+        return results;
+    }
+
+    const genreResults = async (data) => {
+        let results = await getGenreData(data);
+        console.log('actionResults:', results);
+    }
+    genreResults(actionResponseData).then(data => {
+        return data;
+    })
+    genreResults(comedyResponseData).then(data => {
+        return data;
+    })
+    genreResults(horrorResponseData).then(data => {
+        return data;
+    })
+    genreResults(dramaResponseData).then(data => {
+        return data;
+    })
+    genreResults(thrillerResponseData).then(data => {
+        return data;
+    })
+    genreResults(crimeResponseData).then(data => {
+        return data;
+    })
+    genreResults(sciFiResponseData).then(data => {
+        return data;
+    })
+    genreResults(warResponseData).then(data => {
+        return data;
+    })
+    genreResults(animationResponseData).then(data => {
+        return data;
+    })
 
     return getData().then(data => {
         return ({
